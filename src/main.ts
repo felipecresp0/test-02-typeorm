@@ -14,7 +14,12 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: 'http://localhost:5173', // front de Vite
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:19006',
+      'exp://localhost',
+      process.env.FRONTEND_ORIGIN ?? '',
+    ].filter(Boolean),
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });

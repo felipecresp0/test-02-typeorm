@@ -8,9 +8,19 @@ import { UsersModule } from './users/users.module';
 import { FavoritesModule } from './favorites/favorites.module';
 import { OrdersModule } from './orders/orders.module';
 import { AuthModule } from './auth/auth.module';
+import { ItemsModule } from './items/items.module';
 
 @Module({
-  imports: [DatabaseModule, PeliculasModule, CoursesModule, UsersModule, FavoritesModule, OrdersModule, AuthModule],
+  imports: [
+    DatabaseModule,
+    PeliculasModule,
+    CoursesModule,
+    UsersModule,
+    FavoritesModule,
+    OrdersModule,
+    AuthModule,
+    ItemsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
